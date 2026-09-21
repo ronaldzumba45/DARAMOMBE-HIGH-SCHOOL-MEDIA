@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daramombe High School Media</title>
+
+    <link rel="icon" href="LOGO.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="brand">
+            <img src="LOGO.ico" alt="Daramombe High School Logo">
+
+            <div>
+                <h1>DARAMOMBE HIGH SCHOOL MEDIA</h1>
+                <p>AND SOME FELL ON RICH SOIL</p>
+            </div>
+        </div>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+        <nav id="navigation">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#articles">Articles</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#videos">Videos</a>
+            <a href="#events">Events</a>
+            <a href="#radio">Radio</a>
+            <a href="#about">About</a>
+            <a href="#login">Login</a>
+        </nav>
+
+    </header>
+
+    <!-- BREAKING NEWS BAR -->
+    <div class="breaking-news">
+        <strong>Latest Update:</strong>
+        Welcome to Daramombe High School Media.
+    </div>
+
+    <!-- HOMEPAGE -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                CHRIST THE KING DARAMOMBE HIGH SCHOOL
+            </p>
+
+            <h2>
+                Welcome to Daramombe High School Media
+            </h2>
+
+            <p>
+                Discover school news, student creativity, achievements,
+                events and community stories.
+            </p>
+
+            <a href="#news" class="main-button">
+                Explore School News
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- QUICK LINKS -->
+    <section class="quick-links">
+
+        <div>
+            <span>🎓</span>
+            <h3>Students</h3>
+            <p>Student news and activities</p>
+        </div>
+
+        <div>
+            <span>👨‍🏫</span>
+            <h3>Staff</h3>
+            <p>Staff announcements</p>
+        </div>
+
+        <div>
+            <span>🏫</span>
+            <h3>Community</h3>
+            <p>School community updates</p>
+        </div>
+
+        <div>
+            <span>🏆</span>
+            <h3>Excellence</h3>
+            <p>Celebrating achievements</p>
+        </div>
+
+    </section>
+
+    <!-- NEWS SECTION -->
+    <section id="news" class="section">
+
+        <div class="section-title">
+            <div>
+                <p class="small-heading">STAY INFORMED</p>
+                <h2>News and Announcements</h2>
+            </div>
+
+            <button onclick="showLoginMessage()" class="secondary-button">
+                Admin Add News
+            </button>
+        </div>
+
+        <div class="category-buttons">
+            <button onclick="filterNews('all')">All</button>
+            <button onclick="filterNews('news')">News</button>
+            <button onclick="filterNews('announcement')">
+                Announcements
+            </button>
+            <button onclick="filterNews('sports')">Sports</button>
+            <button onclick="filterNews('academic')">Academic</button>
+        </div>
+
+        <div id="news-container" class="card-grid">
+
+            <article class="content-card" data-category="sports">
+
+                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80"
+                     alt="School sports">
+
+                <div class="card-content">
+
+                    <span class="category-label">SPORTS</span>
+
+                    <h3>School Excels in District Athletics</h3>
+
+                    <p>
+                        Our school community celebrates outstanding
+                        sporting achievements.
+                    </p>
+
+                    <div class="card-actions">
+                        <button onclick="likePost(this)">👍 <span>12</span></button>
+                        <button onclick="openComments('School Excels in District Athletics')">
+                            💬 Comments
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="content-card" data-category="announcement">
+
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80"
+                     alt="School announcement">
+
+                <div class="card-content">
+
+                    <span class="category-label">ANNOUNCEMENT</span>
+
+                    <h3>End of Term Notice</h3>
+
+                    <p>
+                        Important information for students, parents
+                        and guardians.
+                    </p>
+
+                    <div class="card-actions">
+                        <button onclick="likePost(this)">👍 <span>8</span></button>
+                        <button onclick="openComments('End of Term Notice')">
+                            💬 Comments
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="content-card" data-category="academic">
+
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80"
+                     alt="Academic activities">
+
+                <div class="card-content">
+
+                    <span class="category-label">ACADEMIC</span>
+
+                    <h3>New Learning Opportunities</h3>
+
+                    <p>
+                        Discover activities that support learning
+                        and creativity.
+                    </p>
+
+                    <div class="card-actions">
+                        <button onclick="likePost(this)">👍 <span>15</span></button>
+                        <button onclick="openComments('New Learning Opportunities')">
+                            💬 Comments
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- STUDENT ARTICLES -->
+    <section id="articles" class="section alternate">
+
+        <div class="section-title">
+            <div>
+                <p class="small-heading">STUDENT VOICES</p>
+                <h2>Student Articles</h2>
+            </div>
+
+            <button onclick="showLoginMessage()" class="secondary-button">
+                Submit Article
+            </button>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="content-card">
+
+                <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80"
+                     alt="Students working together">
+
+                <div class="card-content">
+
+                    <span class="category-label">STUDENT ARTICLE</span>
+
+                    <h3>The Importance of Teamwork</h3>
+
+                    <p>
+                        A student reflection on cooperation,
+                        leadership and school spirit.
+                    </p>
+
+                    <div class="card-actions">
+                        <button onclick="likePost(this)">👍 <span>21</span></button>
+                        <button onclick="openComments('The Importance of Teamwork')">
+                            💬 Comments
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="content-card">
+
+                <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=80"
+                     alt="Green environment">
+
+                <div class="card-content">
+
+                    <span class="category-label">STUDENT ARTICLE</span>
+
+                    <h3>A Greener Future Starts With Us</h3>
+
+                    <p>
+                        Students share ideas for protecting
+                        our environment.
+                    </p>
+
+                    <div class="card-actions">
+                        <button onclick="likePost(this)">👍 <span>10</span></button>
+                        <button onclick="openComments('A Greener Future Starts With Us')">
+                            💬 Comments
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="content-card">
+
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                     alt="Technology and education">
+
+                <div class="card-content">
+
+                    <span class="category-label">STUDENT ARTICLE</span>
+
+                    <h3>Technology and Education</h3>
+
+                    <p>
+                        How digital tools can support
+                        modern learning.
+                    </p>
+
+                    <div class="card-actions">
+                        <button onclick="likePost(this)">👍 <span>17</span></button>
+                        <button onclick="openComments('Technology and Education')">
+                            💬 Comments
+                        </button>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section id="gallery" class="section">
+
+        <div class="section-title">
+            <div>
+                <p class="small-heading">SCHOOL MOMENTS</p>
+                <h2>Photo Gallery</h2>
+            </div>
+        </div>
+
+        <div class="media-grid">
+
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80"
+                     alt="Sports Day">
+                <h3>Sports Day</h3>
+            </div>
+
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80"
+                     alt="School activities">
+                <h3>School Activities</h3>
+            </div>
+
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
+                     alt="Learning together">
+                <h3>Learning Together</h3>
+            </div>
+
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80"
+                     alt="School grounds">
+                <h3>School Grounds</h3>
+            </div>
+
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                     alt="Student creativity">
+                <h3>Student Creativity</h3>
+            </div>
+
+            <div class="media-card">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80"
+                     alt="Community life">
+                <h3>Community Life</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO GALLERY -->
+    <section id="videos" class="section alternate">
+
+        <div class="section-title">
+            <div>
+                <p class="small-heading">WATCH AND LEARN</p>
+                <h2>Video Gallery</h2>
+            </div>
+        </div>
+
+        <div class="media-grid">
+
+            <div class="media-card video-card">
+                <div class="video-image">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80"
+                         alt="School highlights">
+                    <span class="play-button">▶</span>
+                </div>
+                <h3>School Highlights</h3>
+            </div>
+
+            <div class="media-card video-card">
+                <div class="video-image">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80"
+                         alt="Sports highlights">
+                    <span class="play-button">▶</span>
+                </div>
+                <h3>Sports Highlights</h3>
+            </div>
+
+            <div class="media-card video-card">
+                <div class="video-image">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80"
+                         alt="Science and learning">
+                    <span class="play-button">▶</span>
+                </div>
+                <h3>Science and Learning</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="section">
+
+        <div class="section-title">
+            <div>
+                <p class="small-heading">WHAT IS HAPPENING</p>
+                <h2>Upcoming School Events</h2>
+            </div>
+        </div>
+
+        <div class="events-list">
+
+            <div class="event-item">
+                <div class="event-date">
+                    <strong>18</strong>
+                    <span>SEP</span>
+                </div>
+
+                <div>
+                    <h3>Annual Sports Day</h3>
+                    <p>Main Field • 08:00 AM</p>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-date">
+                    <strong>22</strong>
+                    <span>SEP</span>
+                </div>
+
+                <div>
+                    <h3>Career Guidance Seminar</h3>
+                    <p>Assembly Hall • 10:00 AM</p>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-date">
+                    <strong>26</strong>
+                    <span>SEP</span>
+                </div>
+
+                <div>
+                    <h3>Cultural Day</h3>
+                    <p>School Grounds • 09:00 AM</p>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-date">
+                    <strong>03</strong>
+                    <span>OCT</span>
+                </div>
+
+                <div>
+                    <h3>Parent-Teacher Meeting</h3>
+                    <p>Main Hall • 02:00 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RADIO -->
+    <section id="radio" class="section alternate">
+
+        <div class="section-title">
+            <div>
+                <p class="small-heading">LISTEN AND CONNECT</p>
+                <h2>School Radio and Podcasts</h2>
+            </div>
+        </div>
+
+        <div class="radio-grid">
+
+            <div class="radio-card">
+                <div class="radio-icon">🎙️</div>
+
+                <div>
+                    <h3>Student Leadership Podcast</h3>
+                    <p>
+                        A conversation about responsibility,
+                        leadership and service.
+                    </p>
+
+                    <audio controls>
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </div>
+
+            <div class="radio-card">
+                <div class="radio-icon">📻</div>
+
+                <div>
+                    <h3>School Radio: Community Voices</h3>
+                    <p>
+                        Stories, interviews and updates
+                        from our school.
+                    </p>
+
+                    <audio controls>
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT SCHOOL -->
+    <section id="about" class="section about-section">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=80"
+                 alt="School building">
+        </div>
+
+        <div class="about-content">
+
+            <p class="small-heading">ABOUT OUR SCHOOL</p>
+
+            <h2>Christ the King Daramombe High School</h2>
+
+            <p>
+                Daramombe High School Media is a digital platform
+                for sharing school news, student work, achievements,
+                events, photographs, videos and community information.
+            </p>
+
+            <div class="motto">
+                “AND SOME FELL ON RICH SOIL”
+            </div>
+
+            <p>
+                Our platform celebrates learning, discipline,
+                creativity, teamwork and excellence.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- LOGIN SECTION -->
+    <section id="login" class="section login-section">
+
+        <div class="login-box">
+
+            <p class="small-heading">SECURE ACCESS</p>
+
+            <h2>Login to Daramombe High School Media</h2>
+
+            <form onsubmit="loginUser(event)">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" required
+                       placeholder="Enter username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" required
+                       placeholder="Enter password">
+
+                <button type="submit" class="main-button">
+                    Login
+                </button>
+
+                <p id="login-message"></p>
+
+            </form>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- ADMINISTRATOR DASHBOARD -->
+    <section id="dashboard" class="section dashboard-section hidden">
+
+        <div class="section-title">
+
+            <div>
+                <p class="small-heading">CONTROL CENTRE</p>
+                <h2>Administrator Dashboard</h2>
+            </div>
+
+            <button onclick="logoutUser()" class="secondary-button">
+                Logout
+            </button>
+
+        </div>
+
+        <div class="dashboard-cards">
+
+            <div>
+                <strong id="post-count">3</strong>
+                <span>Published Posts</span>
+            </div>
+
+            <div>
+                <strong id="like-count">0</strong>
+                <span>Total Likes</span>
+            </div>
+
+            <div>
+                <strong id="comment-count">0</strong>
+                <span>Comments</span>
+            </div>
+
+            <div>
+                <strong>3</strong>
+                <span>Account Roles</span>
+            </div>
+
+        </div>
+
+        <div class="admin-area">
+
+            <aside class="admin-menu">
+
+                <button onclick="showAdminPanel('content-panel')">
+                    Manage Content
+                </button>
+
+                <button onclick="showAdminPanel('settings-panel')">
+                    Website Settings
+                </button>
+
+                <button onclick="showAdminPanel('comments-panel')">
+                    Comments
+                </button>
+
+                <button onclick="showAdminPanel('security-panel')">
+                    Password &amp; Covers
+                </button>
+
+                <button onclick="showAdminPanel('users-panel')">
+                    Users
+                </button>
+
+            </aside>
+
+            <div class="admin-content">
+
+                <!-- CONTENT PANEL -->
+                <div id="content-panel" class="admin-panel">
+
+                    <h3>Add Published Information</h3>
+
+                    <form onsubmit="publishContent(event)">
+
+                        <label>Content Type</label>
+
+                        <select id="content-type">
+                            <option value="news">News</option>
+                            <option value="article">Student Article</option>
+                            <option value="event">School Event</option>
+                            <option value="video">Video</option>
+                        </select>
+
+                        <label>Title</label>
+                        <input type="text" id="content-title" required>
+
+                        <label>Description</label>
+                        <textarea id="content-description" required></textarea>
+
+                        <label>Image URL</label>
+                        <input type="text" id="content-image"
+                               placeholder="Paste an image URL">
+
+                        <button type="submit" class="main-button">
+                            Publish Content
+                        </button>
+
+                    </form>
+
+                    <p id="content-message"></p>
+
+                </div>
+
+                <!-- SETTINGS PANEL -->
+                <div id="settings-panel" class="admin-panel hidden">
+
+                    <h3>Website Settings</h3>
+
+                    <form onsubmit="saveWebsiteSettings(event)">
+
+                        <label>Website Name</label>
+
+                        <input type="text" id="website-name"
+                               value="Daramombe High School Media">
+
+                        <label>School Motto</label>
+
+                        <input type="text" id="school-motto"
+                               value="AND SOME FELL ON RICH SOIL">
+
+                        <label>School Description</label>
+
+                        <textarea id="school-description">
+Christ the King Daramombe High School digital media platform.
+                        </textarea>
+
+                        <button type="submit" class="main-button">
+                            Save Settings
+                        </button>
+
+                    </form>
+
+                    <p id="settings-message"></p>
+
+                </div>
+
+                <!-- COMMENTS PANEL -->
+                <div id="comments-panel" class="admin-panel hidden">
+
+                    <h3>Comment Moderation</h3>
+
+                    <p>
+                        The administrator will be able to review and
+                        remove inappropriate comments here.
+                    </p>
+
+                    <div id="admin-comments">
+                        No comments available.
+                    </div>
+
+                </div>
+
+                <!-- PASSWORD AND DEPARTMENT COVER SETTINGS -->
+                <div id="security-panel" class="admin-panel hidden">
+                    <h3>Account Security and Department Covers</h3>
+                    <form onsubmit="changeAdminPassword(event)">
+                        <h4>Change Administrator Password</h4>
+                        <label>New Password</label>
+                        <input type="password" id="new-password" minlength="8" required placeholder="Enter a new password">
+                        <label>Confirm New Password</label>
+                        <input type="password" id="confirm-password" minlength="8" required placeholder="Confirm the new password">
+                        <button type="submit" class="main-button">Change Password</button>
+                    </form>
+                    <hr>
+                    <form onsubmit="saveDepartmentCovers(event)">
+                        <h4>Department Cover Pages</h4>
+                        <label>Department Name</label>
+                        <input type="text" id="department-name" required placeholder="e.g. Science Department">
+                        <label>Cover Image URL</label>
+                        <input type="url" id="department-cover-url" required placeholder="https://...">
+                        <button type="submit" class="main-button">Save Department Cover</button>
+                    </form>
+                    <div id="department-covers-list"></div>
+                    <p id="security-message"></p>
+                </div>
+
+                <!-- USERS PANEL -->
+                <div id="users-panel" class="admin-panel hidden">
+
+                    <h3>User Management</h3>
+
+                    <p>
+                        Available account roles:
+                    </p>
+
+                    <ul>
+                        <li>Administrator</li>
+                        <li>Staff</li>
+                        <li>Student</li>
+                    </ul>
+
+                    <p>
+                        A secure online database will be connected
+                        to manage real user accounts.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <img src="LOGO.ico" alt="School logo">
+
+        <div>
+            <h2>DARAMOMBE HIGH SCHOOL MEDIA</h2>
+
+            <p>AND SOME FELL ON RICH SOIL</p>
+
+            <small>
+                © <span id="current-year"></span>
+                Christ the King Daramombe High School.
+                All rights reserved.
+            </small>
+        </div>
+
+    </footer>
+
+    <!-- COMMENTS MODAL -->
+    <div id="comments-modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <button class="close-button" onclick="closeComments()">
+                ×
+            </button>
+
+            <h2 id="comment-title">Comments</h2>
+
+            <div id="comment-list">
+                No comments yet.
+            </div>
+
+            <form onsubmit="submitComment(event)">
+
+                <label>Your Name</label>
+                <input type="text" id="comment-name" required>
+
+                <label>Your Comment</label>
+                <textarea id="comment-text" required></textarea>
+
+                <button type="submit" class="main-button">
+                    Post Comment
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
